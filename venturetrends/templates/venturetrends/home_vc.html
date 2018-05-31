@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <title>W3.CSS Template</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
+    .mySlides {display:none}
+    .w3-tag, .fa {cursor:pointer}
+    .w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+  </style>
+  <body>
+
+<!-- Links (sit on top) -->
+    <div class="w3-top">
+      <div class="w3-row w3-large w3-light-grey">
+        <div class="w3-col s3">
+          <h4> Welcome {{ user.profile.org_name }}</h4>
+        </div>
+        <div class="w3-col s3">
+          <a href="#about" class="w3-button w3-block">About</a>
+        </div>
+        <div class="w3-col s3">
+          <a href="#contact" class="w3-button w3-block">Contact</a>
+        </div>
+        <div class="w3-col s3">
+          <a href="{% url 'logout' %}" class="w3-button w3-block">Logout</a>
+        </div>
+    </div>
+  </div>
+
+
+
+<!-- Content -->
+    <div class="w3-content" style="max-width:900px;margin-top:100px;margin-bottom:120px">
+      <div class="w3-panel" style="text-align:center;">
+        <h1><b>VENTURE TRENDS</b></h1>
+      </div>
+
+
+    <!-- Grid -->
+      <div class="w3-row w3-container">
+
+        <div class="w3-center w3-padding-64">
+          <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Your Dashboard</span>
+        </div>
+        <div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
+          <a href="{% url 'it2' %}" ><h4>View Investment Trends by Industry</h4></a>
+          <p>Identify the investments received by each industry to see which industries are growing and likely to fetch the best returns on investments</p>
+        </div>
+
+        <div class="w3-col l3 m6 w3-grey w3-container w3-padding-16">
+          <a href="{% url 'it1' %}" ><h4>View Investment Trends by Geography and Time</h4></a>
+          <p>Identify the investments received over different geographical locations to see which areas are hotspots for venture capital investments. Track investment growth over time of top industries</p>
+        </div>
+
+        <div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
+          <a href="{% url 'comparecompanies' %}" ><h4>Compare Companies</h4></a>
+          <p>Compare similar companies in terms of funding received and growth</p>
+        </div>
+
+        <div class="w3-col l3 m6 w3-grey w3-container w3-padding-16">
+          <a href="{% url 'viewmyinvestments' %}" ><h4>Track My Investments</h4></a>
+          <p>Track your investments over time and industry</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- about -->
+    <div class="w3-row-padding" id="about">
+      <div class="w3-center w3-padding-64">
+        <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">About Venture Trends</span>
+      </div>
+
+      <div class="w3-third w3-margin-bottom">
+        <div class="w3-card-4">
+          <div class="w3-container">
+            <p>Our team comes to work every day to build technology that helps corporations guess less and win more.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="w3-third w3-margin-bottom">
+        <div class="w3-card-4">
+          <div class="w3-container">
+            <p>We aggregate and analyze massive amounts of data and use data visualization to help corporations replace the three Gs (Google searches, gut instinct and guys with MBAs*) so they can answer massive strategic questions using probability not punditry.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="w3-third w3-margin-bottom">
+        <div class="w3-card-4">
+          <div class="w3-container">
+            <p>It's time to move past the three G's. Your biggest strategic decisions deserve better.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- Contact -->
+    <div class="w3-center w3-padding-64" id="contact">
+      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Contact Us</span>
+    </div>
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card-4">
+        <img src="{% static "images/image_contact_1.jpg" %}"} style="width:30%">
+        <div class="w3-container">
+          <p class="w3-opacity">Email</p>
+          <p>contactus@venturetrends.com</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card-4">
+        <img src="{% static "images/image_contact_2.jpg" %}"} style="width:30%">
+        <div class="w3-container">
+          <p class="w3-opacity">Website</p>
+          <p>www.venturetrends.com</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card-4">
+        <img src="{% static "images/image_contact_3.jpg" %}"} style="width:30%;">
+        <div class="w3-container">
+          <p class="w3-opacity">Phone</p>
+          <p>999-999-9999</p>
+        </div>
+      </div>
+    </div>
+
+
+<!-- Footer -->
+
+<footer class="w3-container w3-padding-32 w3-light-grey w3-center">
+  <a href="#" class="w3-button w3-black w3-margin"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+</footer>
+
+
+<script>
+// Slideshow
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demodots");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+<html>
+<body>
+<p>Hello Admin</p>
+{% if user.is_authenticated %}
+<a href="{% url 'logout' %}">Log out</a>
+{% endif %}
+</body>
+</html>

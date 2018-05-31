@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<title>W3.CSS Template</title>
+<head>
+     <script type="text/javascript"
+	    src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+    <script type="text/javascript">
+        function initViz() {
+            var containerDiv = document.getElementById("vizContainer"),
+                url = "http://public.tableau.com/views/company_compare/company_compare",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+                        console.log("Run this code when the viz has finished loading.");
+                    }
+                };
+
+            var viz = new tableau.Viz(containerDiv, url, options);
+            // Create a viz object and embed it in the container div.
+        }
+    </script>
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
+.mySlides {display:none}
+.w3-tag, .fa {cursor:pointer}
+.w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+</style>
+</head>
+<body onload="initViz();">
+
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-large w3-light-grey">
+      <div class="w3-col s3">
+      <h4> Welcome {{ user.profile.org_name }}</h4>
+    </div>
+      <div class="w3-col s3">
+      <a href="{% url 'home' %}" class="w3-button w3-block">Home</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#contact" class="w3-button w3-block">Contact</a>
+    </div>
+      <div class="w3-col s3">
+      <a href="{% url 'logout' %}" class="w3-button w3-block">Logout</a>
+    </div>
+  </div>
+</div>
+
+<!-- viz -->
+
+    <div id="vizContainer" style="width:1500px; height:620px;margin-top:50px"></div>
+
+<!-- Footer -->
+   <!-- Contact -->
+    <div class="w3-center w3-padding-64" id="contact">
+      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Contact Us</span>
+    </div>
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card-4">
+        <img src="{% static "images/image_contact_1.jpg" %}"} style="width:30%">
+        <div class="w3-container">
+          <p class="w3-opacity">Email</p>
+          <p>contactus@venturetrends.com</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card-4">
+        <img src="{% static "images/image_contact_2.jpg" %}"} style="width:30%">
+        <div class="w3-container">
+          <p class="w3-opacity">Website</p>
+          <p>www.venturetrends.com</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card-4">
+        <img src="{% static "images/image_contact_3.jpg" %}"} style="width:30%;">
+        <div class="w3-container">
+          <p class="w3-opacity">Phone</p>
+          <p>999-999-9999</p>
+        </div>
+      </div>
+    </div>
+
+<footer class="w3-container w3-padding-32 w3-light-grey w3-center">
+  <a href="#" class="w3-button w3-black w3-margin"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+</footer>
+
+
+<script>
+// Slideshow
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demodots");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
+
+</body>
+</html>
