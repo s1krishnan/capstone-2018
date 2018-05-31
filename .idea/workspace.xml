@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a815a322-2a3d-4b75-a135-c59f28e9dce2" name="Default" comment="" />
+    <list default="true" id="a815a322-2a3d-4b75-a135-c59f28e9dce2" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/mysite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/settings.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,11 +43,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="viewmyinvestments.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="viewmyinvestments.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/venturetrends/templates/venturetrends/viewmyinvestments.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="544">
               <caret line="51" column="23" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mysite/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="82" column="66" selection-start-line="82" selection-start-column="66" selection-end-line="82" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -106,7 +117,6 @@
       <list>
         <option value="$PROJECT_DIR$/venturetrends/admin.py" />
         <option value="$PROJECT_DIR$/venturetrends/models.py" />
-        <option value="$PROJECT_DIR$/mysite/settings.py" />
         <option value="$PROJECT_DIR$/venturetrends/templates/venturetrends/home.html" />
         <option value="$PROJECT_DIR$/venturetrends/templates/venturetrends/home_admin.html" />
         <option value="$USER_HOME$/djangogirls/blog/views.py" />
@@ -126,6 +136,7 @@
         <option value="$PROJECT_DIR$/venturetrends/templates/venturetrends/investordetails.html" />
         <option value="$PROJECT_DIR$/venturetrends/templates/venturetrends/comparecompanies.html" />
         <option value="$PROJECT_DIR$/venturetrends/templates/venturetrends/viewmyinvestments.html" />
+        <option value="$PROJECT_DIR$/mysite/settings.py" />
       </list>
     </option>
   </component>
@@ -473,13 +484,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="643">
-          <caret line="127" column="28" selection-start-line="127" selection-start-column="28" selection-end-line="127" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/djangogirls/blog/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
@@ -620,6 +624,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="51" column="23" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="82" column="66" selection-start-line="82" selection-start-column="66" selection-end-line="82" selection-end-column="66" />
         </state>
       </provider>
     </entry>

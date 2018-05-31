@@ -77,11 +77,10 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'venture_trends',
-        'USER': 'root',
-        'PASSWORD': 'venture@trends2018',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'NAME': 'venturetrends$venturetrends',
+        'USER': 'venturetrends',
+        'PASSWORD': 'mysql2018',
+        'HOST': 'venturetrends.mysql.pythonanywhere-services.com',
     }
 }
 
