@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 # Create your views here.
 def venturetrends_home(request):
-    return render(request, 'venturetrends/temp.html', {})
+    return render(request, 'venturetrends/venturetrends_home.html', {})
 
 @login_required
 def home(request):
